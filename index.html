@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Cristina♡</title>
+
+  <style>
+    body {
+      background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/68/Vincent_van_Gogh_-_Almond_blossom_-_Google_Art_Project.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    .overlay {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      max-width: 330px;
+      width: 90%;
+    }
+
+    h1 {
+      color: #c9184a;
+      font-size: 26px;
+    }
+
+    p {
+      font-size: 17px;
+      color: #444;
+    }
+
+    h2 {
+      font-size: 20px;
+      color: #6a040f;
+    }
+
+    button {
+      margin: 10px 5px;
+      padding: 12px 18px;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      width: 120px;
+    }
+
+    .yes {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    .no {
+      background: #ccc;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="overlay" id="card">
+    <h1>🌸 Cristina♡ 🌸</h1>
+    <p>
+      Como este almendro en flor,<br>
+      llegaste a llenar todo de color.
+    </p>
+    <h2>¿Quieres ser mi San Valentín? 💐</h2>
+
+    <button class="yes" onclick="sayYes()">Sí 💕</button>
+    <button class="no" onclick="sayNo()">No 🙈</button>
+  </div>
+
+  <!-- Música -->
+  <audio id="music" loop>
+    <source src="https://files.catbox.moe/6kq7rx.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function sayYes() {
+      document.getElementById("music").play();
+
+      document.getElementById("card").innerHTML = `
+        <h1>💖 Me haces muy feliz 💖</h1>
+        <p>
+          Gracias por decir que sí, Cristina♡<br><br>
+          Prometo hacerte sonreír,<br>
+          cuidarte y llenar de amor cada momento ✨
+        </p>
+      `;
+    }
+
+    function sayNo() {
+      alert("Esa opción no existe 😅💔 intenta otra vez");
+    }
+  </script>
+
+</body>
+</html>
